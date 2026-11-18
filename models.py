@@ -5,9 +5,13 @@ class Entity:
 
 
 class World:
-  def __init__(self):
-    pass
+  def __init__(self, high: int, wight:int):
+    self.high = high
+    self.wight = wight
+    self.entities = list[Entity] = []
 
+  def add_entity(self, entity: Entity):
+    self.entities.append(entity)
 
 class Renderer:
   def __init__(self):
